@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador -->
+    <title>JORNADA JAPÃO</title>
+
+    <!-- Arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cabeçalho do site -->
+    <header>
+        <!-- Logo Torii -->
+        <img src="images/torii.png" alt="PortalTorii">
+
+        <!-- Nome do projeto -->
+        <h1><span class="black"> JORNADA </span>JAPÃO</h1>
+
+        <!-- Menu de navegação -->
+        <div class="menu-option">
+            <p>Ínicio</p>
+            <p>Sobre o curso</p>
+            <p>Conteúdo</p>
+            <p>Depoimentos</p>
+            <p>Contato</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal da página -->
+    <main class="container-principal">
+
+        <!-- Div reservada para futuras imagens -->
+        <div class="coluna-imagem"></div>
+
+        <!-- Área de apresentação do curso -->
+        <div class="coluna-conteudo">
+            <section class="introducao">
+
+                <!-- Título principal -->
+                <h1>JORNADA <span class="red">JAPÃO</span></h1>
+
+                <!-- Elemento decorativo -->
+                <div id="forms">
+                    <div id="circle"></div>
+                    <div id="line"></div>
+                </div>
+
+                <!-- Texto de boas-vindas -->
+                <h2>Bem vindo(a) ao cadastro do curso</h2>
+
+                <!-- Descrição do curso -->
+                <p class="texto-descricao"><strong>
+                    Domine o japonês prático e conquiste sua autonomia no outro lado do mundo.
+                    Do zero à conversação real, unindo idioma, cultura e a confiança que você precisa
+                    para viajar, trabalhar ou consumir sua cultura pop favorita.</strong>
+                </p>
+
+                <!-- Chamada de ação -->
+                <p class="red">
+                    <strong>Sua viagem rumo à fluência começa aqui!</strong>
+                </p>
+
+            </section>
+        </div>
+
+        <!-- Formulário de cadastro -->
+        <div class="formulario">
+            <form action="/index.HTML" method="POST" class="formulario-cadastro">
+
+                <legend class="titulo-formulario">
+                    Formulário de Cadastro:
+                </legend>
+
+                <!-- Campo nome -->
+            <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome"
+                        placeholder="Digite seu nome completo">
+            </div>
+                <!-- Campo e-mail -->
+            <div class="campo">
+                    <label for="e-mail">E-mail</label>
+                    <input type="email" id="e-mail" name="e-mail"
+                        placeholder="Digite seu e-mail">
+            </div>
+                <!-- Campo senha -->
+            <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha"
+                        placeholder="Crie uma senha">
+            </div>
+                <!-- Confirmar senha -->
+            <div class="campo">
+                    <label for="senhac">Confirmar senha</label>
+                    <input type="password" id="senhac" name="senhac"
+                        placeholder="Confirme sua senha">
+            </div>
+
+                <!-- Data de nascimento -->
+            <div class="campo">
+                    <label for="data">Data de nascimento</label>
+                    <input type="date" id="data" name="data">
+            </div>
+
+                <!-- Telefone -->
+            <div class="campo">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone"
+                        placeholder="(11) 99999-9999">
+            </div>
+
+                <!-- Nível de japonês -->
+                <div class="niveis">
+                    <h3>Nível de japonês:</h3>
+
+                    <div class="opcoes-radio">
+
+                        <input type="radio" id="n1" name="botao" value="Iniciante">
+                        <label for="n1">
+                            <span class="red">Iniciante</span>
+                        </label>
+
+                        <input type="radio" id="n2" name="botao" value="Intermediario">
+                        <label for="n2">
+                            <span class="red">Intermediário</span>
+                        </label>
+
+                        <input type="radio" id="n3" name="botao" value="Avancado">
+                        <label for="n3">
+                            <span class="red">Avançado</span>
+                        </label>
+
+                    </div>
+                </div>
+
+                <!-- Botões de ação -->
+                <div class="botoes-acao">
+                    <button type="submit"
+                        onclick="alert('Dados enviados!')"
+                        class="btn-cadastrar">
+                        Cadastrar
+                    </button>
+
+                    <button type="reset" class="btn-limpar">
+                        Limpar
+                    </button>
+                </div>
+                <p><a href="../index.html">← Voltar para a página principal</a></p>
+            </form>
+        </div>
+
+    </main>
+
+</body>
+</html>
