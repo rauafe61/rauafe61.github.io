@@ -1,0 +1,323 @@
+/* =========================
+   IMPORTAÇÃO DA FONTE
+   ========================= */
+
+/* Carrega a fonte Poppins da pasta fonts */
+@font-face {
+    font-family: "Poppins";
+    src: url("fonts/Poppins-Regular.ttf");
+}
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+   ========================= */
+
+body {
+    color: #252525; /* Cor padrão dos textos */
+    font-family: "Poppins"; /* Fonte aplicada em toda a página */
+    background-color: white; /* Fundo branco */
+    margin: 0; /* Remove margens padrão do navegador */
+}
+
+/* =========================
+   CABEÇALHO
+   ========================= */
+
+header {
+    background-color: #d32f2f; /* Cor vermelha do cabeçalho */
+    height: 80px; /* Altura fixa */
+    width: 100%; /* Ocupa toda a largura da tela */
+    display: flex; /* Alinha elementos horizontalmente */
+    align-items: center; /* Centraliza elementos verticalmente */
+}
+
+header h1 {
+    font-size: 26px; /* Tamanho do título */
+    color: white; /* Cor branca */
+    margin-left: -10px; /* Ajuste fino da posição */
+}
+
+header img {
+    height: 60px; /* Altura da imagem Torii */
+    margin-right: 0;
+}
+
+/* Classes auxiliares para cores */
+.black {
+    color: #252525;
+}
+
+.red {
+    color: #d32f2f;
+}
+
+/* Menu de navegação */
+.menu-option {
+    margin-left: auto; /* Empurra o menu para a direita */
+    color: white;
+    display: flex; /* Itens lado a lado */
+    gap: 40px; /* Espaçamento entre itens */
+    padding: 0 30px;
+}
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+   ========================= */
+
+.container-principal {
+    display: flex; /* Organiza conteúdo em colunas */
+    align-items: flex-start; /* Alinha tudo pelo topo */
+    justify-content: space-between; /* Espaço entre texto e formulário */
+
+    min-height: calc(100vh - 80px); /* Ocupa a tela inteira descontando o header */
+
+    /* Imagem de fundo temática do Japão */
+
+    background-image: url("images/vector.png");
+    background-repeat: no-repeat; 
+    
+    /* 'cover' faz a imagem cobrir o espaço mantendo a proporção correta */
+    background-size: cover; 
+    
+    /* Centraliza ou ajusta a posição para focar na parte bonita da imagem */
+    background-position: center bottom; 
+
+    padding: 60px 40px 40px 40px; 
+    box-sizing: border-box;
+}
+
+/* =========================
+   COLUNA DE TEXTO
+   ========================= */
+
+.coluna-conteudo {
+    flex: 1; /* Ocupa espaço disponível */
+    max-width: 550px; /* Limita largura máxima */
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    z-index: 2; /* Mantém o texto acima da imagem */
+    position: relative;
+
+    left: -250px; /* Move o bloco para a esquerda */
+    margin-top: -80px; /* Move o bloco para cima */
+}
+
+/* =========================
+   INTRODUÇÃO
+   ========================= */
+
+.introducao h1 {
+    font-size: 50px; /* Título principal */
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.texto-descricao {
+    color: rgb(59, 59, 59);
+    max-width: 500px; /* Evita linhas muito grandes */
+    line-height: 1.6; /* Melhora leitura */
+}
+
+/* =========================
+   ELEMENTOS DECORATIVOS
+   ========================= */
+
+#forms {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Bolinha vermelha decorativa */
+#circle {
+    width: 10px;
+    height: 10px;
+    background-color: #d32f2f;
+    border-radius: 50%;
+}
+
+/* Linha decorativa */
+#line {
+    width: 150px;
+    height: 2px;
+    background-color: #d32f2f;
+    margin-left: 10px;
+}
+
+/* =========================
+   FORMULÁRIO
+   ========================= */
+
+.formulario {
+    width: 100%;
+    max-width: 450px; /* Limita largura */
+
+    padding: 30px;
+
+    background: #f0f0f0; /* Fundo cinza claro */
+    border-radius: 10px; /* Cantos arredondados */
+
+    box-sizing: border-box;
+
+    position: relative;
+    left: 25px; /* Move formulário para direita */
+    margin-top: -10px; /* Ajuste vertical */
+}
+
+.formulario-cadastro {
+    max-width: 450px;
+    margin-top: 30px;
+    /* Ativa as duas colunas lado a lado */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 15px; /* 0 de espaço vertical extra (já controlado pelo margin-bottom do campo), 15px horizontal */
+}
+/* Faz o título do formulário ocupar a linha inteira */
+.titulo-formulario {
+    grid-column: span 2;
+    position: relative;
+    top: -32px; /* Ajusta a posição do título para cima */
+}
+/* Faz a seção "Nível de japonês" ocupar a linha inteira */
+.niveis {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    margin-top: -39px; /* Mantive o seu ajuste original */
+}
+.botoes-acao {
+    grid-column: span 2;
+    display: flex;
+    gap: 15px;
+}
+
+/* =========================
+   CAMPOS DO FORMULÁRIO
+   ========================= */
+
+.campo {
+    display: flex;
+    flex-direction: column; /* Label acima do input */
+    margin-bottom: 18px;
+}
+
+.campo label {
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #252525;
+}
+
+.campo input {
+    padding: 10px; /* Espaço interno */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+
+    outline: none;
+    transition: border-color 0.3s; /* Animação suave */
+}
+
+/* Destaca campo quando selecionado */
+.campo input:focus {
+    border-color: #d32f2f;
+}
+
+input {
+    width: 100%; /* Ocupa toda a largura */
+    box-sizing: border-box;
+}
+
+/* =========================
+   NÍVEL DE JAPONÊS
+   ========================= */
+
+.niveis {
+    display: flex;
+    flex-direction: column;
+    margin-top: -39px;
+}
+
+h3 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: red;
+}
+
+.opcoes-radio {
+    display: flex;
+    gap: 15px; /* Espaço entre opções */
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.opcoes-radio input {
+    cursor: pointer; /* Muda cursor ao passar */
+}
+
+.opcoes-radio label {
+    margin-left: -5px;
+    cursor: pointer;
+}
+
+/* =========================
+   BOTÕES
+   ========================= */
+
+.botoes-acao {
+    display: flex;
+    gap: 15px;
+}
+
+/* Botão cadastrar */
+.btn-cadastrar {
+    background-color: #d32f2f;
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 15px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: background 0.2s;
+}
+
+/* Efeito ao passar o mouse */
+.btn-cadastrar:hover {
+    background-color: #a62424;
+}
+
+/* Botão limpar */
+.btn-limpar {
+    background-color: #f0f0f0;
+    color: #252525;
+
+    border: 1px solid #ccc;
+
+    padding: 12px 25px;
+
+    font-family: "Poppins";
+    font-size: 15px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: background 0.2s;
+}
+
+/* Efeito hover do botão limpar */
+.btn-limpar:hover {
+    background-color: #e0e0e0;
+}
