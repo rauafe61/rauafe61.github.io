@@ -8,6 +8,10 @@
     src: url("fonts/Poppins-Regular.ttf");
 }
 
+html {
+   zoom: 125%;
+}
+
 /* =========================
    CONFIGURAÇÕES GERAIS
    ========================= */
