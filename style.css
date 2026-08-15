@@ -1,0 +1,42 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("Atividade-css01-sala/fonts/Poppins-Regular.ttf");
+}
+
+body{
+    font-family: "Poppins";
+    font-size: 18px;
+    background-color: #FAFBF8;
+    color: #1F2C43;
+    max-width: 50%;
+    margin-left: 25%;
+    z-index: 1;
+}
+
+a{
+    color: #1F2C43;
+}
+
+header{
+    display: flex;
+}
+
+h1{
+    font-size: 2rem;
+    margin-bottom: -10px;
+}
+
+header img{
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.txtapagado{
+    color: #586a88;
+}
+
+.linha{
+    margin-top: 20px;
+    background-color: #1F2C43;
+    height: 1px;
+}
