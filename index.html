@@ -1,86 +1,94 @@
-<!DOCTYPE html>
-
+<!-- ============================================================
+     TEMPLATE — Página pessoal com CSS Grid
+     Programação Web / Introdução às Tecnologias Web — IFAL
+     COMO USAR:
+     1) Copie ESTE index.html para o seu repositório (não mude a estrutura).
+     2) Escolha UM dos 3 temas de CSS (tema-1-indigo.css, tema-2-escuro.css
+        ou tema-3-editorial.css) e salve-o no seu projeto como  estilo.css
+        (é o nome que este HTML carrega logo abaixo).
+     3) Troque os textos marcados com "TROQUE" pelo seu conteúdo.
+     IMPORTANTE: o LAYOUT é feito com CSS Grid e é o mesmo nos 3 temas.
+     Você escolhe a APARÊNCIA (fonte, cores, bordas), não o layout.
+     ============================================================ -->
 <html lang="pt-BR">
-  <head>
-    <title>Página Pessoal</title>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.2">
-  </head>
 
-  <body class="fundo">
-    <div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal — Seu Nome</title>
+  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <h1>Rauã <br/> Ferreira da Silva</h1>
+<body>
+  <div class="pagina">
 
-    <hr class="linha">
+    <!-- ====== CABEÇALHO — TROQUE pelo seu nome e sua frase ====== -->
+    <header class="cabecalho">
+      <h1>Rauã Ferreira da Silva</h1>
+      <p>Estudante de Sistemas de Informação · IFAL</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
 
-    <p class="txtapagado">1° ano do Ensino Médio em Desenvolvimento de Sistemas</p>
-
-      <div>
-        <header>
-          <img src="MinhaImagem.jpg"
-          height="300"
-          width="225"
-          />
-        <p><b>Sobre mim:</b> Gosto de tocar violão, jogar, ouvir música e desenhar. Estudo programação e estou sempre buscando aprender coisas novas e evoluir minhas habilidades na área.</p>
-        <header>
-      </div>
-    <main>
-      <section>
-        <footer>
-          <p>Data de nascimento: 24/02/2011</p>
-          <h3>Conhecimentos na área do curso:</h3>
-        </footer>
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main class="principal">
+      <section id="sobre" class="cartao">
+        <h2>Sobre mim</h2>
+        <!-- TROQUE por uma breve apresentação sua -->
+        <p>Gosto de tocar violão, jogar, ouvir música e desenhar. Estudo programação e estou sempre buscando aprender coisas novas e evoluir minhas habilidades na área.</p>
       </section>
-      <ul>
-        <li><b>Hardware</b> e <b>Software</b></li>
-        <li><b>Github</b> e <b>Git</b></li>
-        <li><b>Html</b></li>
-        <li><b>Tags</b></li>
-        <li><b>Atributos</b></li>
-        <li><b>IP</b></li>
-        <li><b>JavaScript</b></li>
-        <li><b>Lógica</b></li>
-      </ul>
-    </main>    
 
-    <aside>
-      <p>O <b>curso técnico</b> em <b>Desenvolvimento de Sistemas</b> é uma formação focada em <b>criar soluções tecnológicas</b> do <b>zero</b>. Ele prepara você para atuar em todas as etapas de <b>construção de um software</b>, desde o planejamento até a entrega final.</p>
-      <a target="_blank" href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/tecnicos-integrados/desenvolvimento-de-sistemas">Clique aqui para acessar o site do meu curso.</a>
+      <section id="projetos" class="cartao">
+        <h2>Projetos</h2>
+        <!-- Galeria com Grid: cada .projeto é um card; adicione/remova à vontade -->
+        <div class="projetos">
+          <article class="projeto">
+            <h3>Projeto 1</h3>
+            <p><!--O que é e o que você fez. TROQUE por um projeto seu.--></p>
+          </article>
+          <article class="projeto">
+            <h3>Projeto 2</h3>
+            <p><!--Descrição curta do projeto.--></p>
+          </article>
+          <article class="projeto">
+            <h3>Projeto 3</h3>
+            <p><!--Descrição curta do projeto.--></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====== BARRA LATERAL ====== -->
+    <aside class="lateral">
+      <section class="cartao">
+        <h2>Habilidades</h2>
+        <!-- TROQUE pelas suas habilidades -->
+        <ul class="habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Grid</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+
+      <section id="contato" class="cartao">
+        <h2>Contato</h2>
+        <!-- TROQUE pelos seus links -->
+        <ul class="contato">
+          <li>✉️ <a href="mailto:rauafe@gmail.com">rauafe@gmail.com</a></li>
+          <li>🐙 <a href="https://github.com/rauafe61">github.com/rauafe61</a></li>
+        </ul>
+      </section>
     </aside>
 
-<hr class="linha">
+    <!-- ====== RODAPÉ — TROQUE o nome ====== -->
+    <footer class="rodape">© 2026 Rauã Ferreira da Silva · feito com HTML + CSS Grid</footer>
 
-  <nav aria-label="Atividades do Capítulo 4">
-    <h2>Capítulo 4 — Tabelas, Listas e Mídia</h2>
-      <ul>
-        <li><a href="cap04/at01.html">Atividade 1 — Tabela Básica</a></li>
-        <li><a href="cap04/at02.html">Atividade 2 — Tabela Semântica com Mesclagem</a></li>
-        <li><a href="cap04/at03.html">Atividade 3 — Listas Avançadas e Glossário</a></li>
-        <li><a href="cap04/at04.html">Atividade 4 — Página Multimídia</a></li>
-      </ul>
-
-  <nav aria-label="Atividades do Capítulo 5">
-    <h2>Capítulo 5 — Formulários</h2>
-      <ul>
-        <li><a href="cap05/at01.html">Atividade 1 — Formulário de contato</a></li>
-        <li><a href="cap05/at02.html">Atividade 2 — Formulário de Cadastro</a></li>
-        <li><a href="cap05/at03.html">Atividade 3 — Formulário de Matrícula</a></li>
-        <li><a href="cap05/at04.html">Atividade 4 — Formulário de Evento</a></li>
-        <li><a href="cap05/at05.html">Atividade 5 — Formulário de Pesquisa Acadêmica</a></li>
-      </ul>
-    <h2>Atividade-css01-sala</h2>
-      <ul>
-        <li><a href="Atividade-css01-sala/index.HTML">Atividade-css01-sala</a></li>
-      </ul>
-    <h2>Atividade-css02</h2>
-      <ul>
-        <li><a href="Atividade-css02/index.html">Atividade-css02</a></li>
-      </ul>
-</nav>
   </div>
-  </body>
-
+</body>
 
 </html>
