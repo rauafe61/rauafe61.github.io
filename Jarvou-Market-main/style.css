@@ -215,3 +215,8 @@ footer a:hover {
   transform: translateY(-0.15rem);
   border-color: #0d6efd;
 }
+
+.text-decoration{
+  text-decoration: underline
+  color: inherit;
+}
