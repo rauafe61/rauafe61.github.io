@@ -1,0 +1,217 @@
+body {
+  background-color: #f8fafc !important;
+  color: #1e293b;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.bg-primary.text-center.py-2 {
+  background-color: #0d6efd !important;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.navbar {
+  background-color: #ffffff !important;
+  box-shadow: 0 0.1rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+.navbar-brand img {
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
+}
+
+.form-control {
+  border-radius: 2rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-outline-primary {
+  border-radius: 2rem;
+  transition: all 0.2s ease;
+}
+
+#carouselExampleFade,
+.carousel {
+  border-radius: 1rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.carousel-item img {
+  height: 20rem !important;
+  object-fit: contain !important;
+  width: 100%;
+}
+
+.categoria-item {
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.categoria-item:hover {
+  transform: translateY(-0.25rem);
+}
+
+.categoria-circle {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  margin: 0 auto 0.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.categoria-item:hover .categoria-circle {
+  border-color: #0d6efd;
+  box-shadow: 0 0.2rem 0.6rem rgba(13, 110, 253, 0.15);
+}
+
+h2, .titulo-secao {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card {
+  border: none !important;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.35rem);
+  box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 12rem;
+  object-fit: contain !important;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.03);
+}
+
+.card .badge {
+  border-radius: 0.4rem;
+  padding: 0.4em 0.6em;
+}
+
+.card .btn-primary {
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.card .btn-primary:active {
+  transform: scale(0.97);
+}
+
+.banner-promo {
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.banner-promo:hover {
+  transform: scale(1.01);
+}
+
+.beneficio-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.beneficio-item:hover {
+  transform: translateY(-0.15rem);
+}
+
+.beneficio-icone {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #e7f0ff;
+  color: #0d6efd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter-box {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.newsletter-box .input-group {
+  max-width: 30rem;
+  margin: 1rem auto 0 auto;
+}
+
+footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  margin-top: 2.5rem;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer a {
+  color: #64748b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #0d6efd;
+}
+
+.redes-sociais, .formas-pagamento {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icone-social, .icone-pagamento {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.icone-social:hover {
+  transform: translateY(-0.15rem);
+  border-color: #0d6efd;
+}

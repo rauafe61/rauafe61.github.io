@@ -1,94 +1,112 @@
-<!-- ============================================================
-     TEMPLATE — Página pessoal com CSS Grid
-     Programação Web / Introdução às Tecnologias Web — IFAL
-     COMO USAR:
-     1) Copie ESTE index.html para o seu repositório (não mude a estrutura).
-     2) Escolha UM dos 3 temas de CSS (tema-1-indigo.css, tema-2-escuro.css
-        ou tema-3-editorial.css) e salve-o no seu projeto como  estilo.css
-        (é o nome que este HTML carrega logo abaixo).
-     3) Troque os textos marcados com "TROQUE" pelo seu conteúdo.
-     IMPORTANTE: o LAYOUT é feito com CSS Grid e é o mesmo nos 3 temas.
-     Você escolhe a APARÊNCIA (fonte, cores, bordas), não o layout.
-     ============================================================ -->
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Pessoal — Rauã Ferreira da Silva</title>
-  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  <!-- Esta linha faz o site se ajustar ao celular. Mantenha sempre. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rauã Ferreira da Silva — Página Pessoal</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="pagina">
 
-    <!-- ====== CABEÇALHO — TROQUE pelo seu nome e sua frase ====== -->
-    <header class="cabecalho">
-      <h1>Rauã Ferreira da Silva</h1>
-      <p>Estudante de Sistemas de Informação · IFAL</p>
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </header>
+  <!-- 1) CABEÇALHO: logo + menu (flex em linha) -->
+  <header class="topo">
+    <a class="logo" href="#inicio">Rauã</a>
+    <nav class="menu" aria-label="Menu principal">
+      <a href="#sobre">Sobre</a>
+      <a href="#conhecimentos">Conhecimentos</a>
+      <a href="#curso">Curso</a>
+      <a href="#atividades">Atividades</a>
+    </nav>
+  </header>
 
-    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
-    <main class="principal">
-      <section id="sobre" class="cartao">
-        <h2>Sobre mim</h2>
-        <!-- TROQUE por uma breve apresentação sua -->
-        <p>Gosto de tocar violão, jogar, ouvir música e desenhar. Estudo programação e estou sempre buscando aprender coisas novas e evoluir minhas habilidades na área.</p>
-      </section>
+  <main>
 
-      <section id="projetos" class="cartao">
-        <h2>Projetos</h2>
-        <!-- Galeria com Grid: cada .projeto é um card; adicione/remova à vontade -->
-        <div class="projetos">
-          <article class="projeto">
-            <h3>Projeto 1</h3>
-            <p><!--O que é e o que você fez. TROQUE por um projeto seu.--></p>
-          </article>
-          <article class="projeto">
-            <h3>Projeto 2</h3>
-            <p><!--Descrição curta do projeto.--></p>
-          </article>
-          <article class="projeto">
-            <h3>Projeto 3</h3>
-            <p><!--Descrição curta do projeto.--></p>
-          </article>
+    <!-- 2) APRESENTAÇÃO: foto + texto lado a lado (flex) -->
+    <section class="apresentacao" id="inicio">
+      <img class="foto" src="MinhaImagem.jpg" alt="Foto de Rauã Ferreira da Silva" width="225" height="300">
+      <div class="apresentacao-texto">
+        <h1>Rauã Ferreira da Silva</h1>
+        <p class="apagado">1º ano do Ensino Médio em Desenvolvimento de Sistemas</p>
+        <p id="sobre">
+          Gosto de tocar violão, jogar, ouvir música e desenhar. Estudo programação
+          e estou sempre buscando aprender coisas novas e evoluir minhas habilidades na área.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3) CONHECIMENTOS: "etiquetas" que quebram de linha sozinhas (flex-wrap) -->
+    <section id="conhecimentos">
+      <h2>Conhecimentos na área do curso</h2>
+      <ul class="etiquetas">
+        <li>Hardware e Software</li>
+        <li>Git e GitHub</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Lógica</li>
+        <li>IP</li>
+      </ul>
+    </section>
+
+    <!-- 4) CURSO -->
+    <section class="curso" id="curso">
+      <h2>Sobre o meu curso</h2>
+      <p>
+        O curso técnico em <b>Desenvolvimento de Sistemas</b> é uma formação focada em
+        criar soluções tecnológicas do zero. Ele prepara você para atuar em todas as
+        etapas de construção de um software, do planejamento até a entrega final.
+      </p>
+      <a class="botao" target="_blank" rel="noopener"
+         href="https://www2.ifal.edu.br/campus/maceio/ensino/cursos/tecnicos-integrados/desenvolvimento-de-sistemas">
+        Acessar o site do curso
+      </a>
+    </section>
+
+    <!-- 5) ATIVIDADES: colunas lado a lado (flex-wrap) -->
+    <section id="atividades">
+      <h2>Minhas atividades</h2>
+
+      <div class="colunas">
+        <div class="coluna">
+          <h3>Capítulo 4 — Tabelas, listas e mídia</h3>
+          <ul>
+            <li><a href="cap04/at01.html">Atividade 1 — Tabela básica</a></li>
+            <li><a href="cap04/at02.html">Atividade 2 — Tabela semântica com mesclagem</a></li>
+            <li><a href="cap04/at03.html">Atividade 3 — Listas avançadas e glossário</a></li>
+            <li><a href="cap04/at04.html">Atividade 4 — Página multimídia</a></li>
+          </ul>
         </div>
-      </section>
-    </main>
 
-    <!-- ====== BARRA LATERAL ====== -->
-    <aside class="lateral">
-      <section class="cartao">
-        <h2>Habilidades</h2>
-        <!-- TROQUE pelas suas habilidades -->
-        <ul class="habilidades">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Grid</li>
-          <li>JavaScript</li>
-        </ul>
-      </section>
+        <div class="coluna">
+          <h3>Capítulo 5 — Formulários</h3>
+          <ul>
+            <li><a href="cap05/at01.html">Atividade 1 — Formulário de contato</a></li>
+            <li><a href="cap05/at02.html">Atividade 2 — Formulário de cadastro</a></li>
+            <li><a href="cap05/at03.html">Atividade 3 — Formulário de matrícula</a></li>
+            <li><a href="cap05/at04.html">Atividade 4 — Formulário de evento</a></li>
+            <li><a href="cap05/at05.html">Atividade 5 — Formulário de pesquisa acadêmica</a></li>
+          </ul>
+        </div>
 
-      <section id="contato" class="cartao">
-        <h2>Contato</h2>
-        <!-- TROQUE pelos seus links -->
-        <ul class="contato">
-          <li>✉️ <a href="mailto:rauafe@gmail.com">rauafe@gmail.com</a></li>
-          <li>🐙 <a href="https://github.com/rauafe61">github.com/rauafe61</a></li>
-        </ul>
-      </section>
-    </aside>
+        <div class="coluna">
+          <h3>Atividades de CSS</h3>
+          <ul>
+            <li><a href="Atividade-css01-sala/index.HTML">CSS 01 — Atividade em sala</a></li>
+            <li><a href="Atividade-css02/index.html">CSS 02</a></li>
+            <li><a href="Jarvou-Market-main/index.html"></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    <!-- ====== RODAPÉ — TROQUE o nome ====== -->
-    <footer class="rodape">© 2026 Rauã Ferreira da Silva · feito com HTML + CSS Grid</footer>
+  </main>
 
-  </div>
+  <!-- 6) RODAPÉ -->
+  <footer class="rodape">
+    <p>© 2026 Rauã Ferreira da Silva</p>
+  </footer>
+
 </body>
-
 </html>
