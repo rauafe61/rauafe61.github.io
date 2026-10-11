@@ -1,112 +1,150 @@
-/* ============================================================
-   TEMA 3 — EDITORIAL (claro, sério, com fonte serifada)
-   Para usar: salve este arquivo como  estilo.css  no seu projeto.
-   Você pode mudar CORES, FONTE e BORDAS aqui.
-   NÃO mexa na seção "LAYOUT (GRID)" — é o layout pedido na atividade.
-   ============================================================ */
-
-/* ---- Cores e fonte (mude à vontade) ---- */
-:root {
-  --cor: #b5533b;
-  --cor-escura: #8f3f2c;
-  --texto: #2b2b2b;
-  --suave: #7a6f66;
-  --fundo: #faf6f0;
-  --superficie: #ffffff;
-  --borda: #e3d9cc;
-  --raio: 6px;
-}
-
 @font-face {
-    font-family: "Poppins";
-    src: url("Atividade-css01-sala/fonts/Poppins-Regular.ttf");
+  font-family: "Poppins";
+  src: url("fonts/Poppins-Regular.ttf");
 }
+
+:root {
+  --fundo:   #FAFBF8;
+  --texto:   #1F2C43;
+  --apagado: #586a88;
+  --destaque:#F2C14E;
+  --cartao:  #EEF1F6;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  font-family: "Poppins";
-  color: var(--texto);
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
   background: var(--fundo);
-  line-height: 1.65;
+  color: var(--texto);
 }
 
-/* ============================================================
-   LAYOUT (GRID) — NÃO MUDE
-   ============================================================ */
-* { box-sizing: border-box; }
+a { color: var(--texto); }
 
-.pagina {
-  display: grid;
-  grid-template-columns: 1fr 300px;
-  grid-template-areas:
-    "cabecalho cabecalho"
-    "principal lateral"
-    "rodape    rodape";
-  gap: 24px;
-  max-width: 1000px;
+h1, h2, h3 { line-height: 1.25; }
+h1 { font-size: 2.2rem; margin: 0 0 .25rem; }
+h2 { font-size: 1.5rem; margin: 0 0 1rem; }
+h3 { font-size: 1.05rem; margin: 0 0 .75rem; }
+
+.apagado { color: var(--apagado); margin-top: 0; }
+
+main, .topo, .rodape {
+  width: 100%;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 0 1.25rem;
 }
 
-.cabecalho { grid-area: cabecalho; }
-.principal { grid-area: principal; }
-.lateral   { grid-area: lateral; }
-.rodape    { grid-area: rodape; }
+section { padding: 2.5rem 0; }
 
-.projetos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 16px;
-  margin-top: 14px;
+.topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem 1.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--texto);
 }
 
-@media (max-width: 640px) {
-  .pagina {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "cabecalho"
-      "principal"
-      "lateral"
-      "rodape";
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.menu a { text-decoration: none; padding-bottom: 2px; }
+.menu a:hover,
+.menu a:focus-visible { border-bottom: 3px solid var(--destaque); }
+
+.apresentacao {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.foto {
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 8px 8px 0 var(--destaque);
+}
+
+.apresentacao-texto { flex: 1; }
+
+.etiquetas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+
+.etiquetas li {
+  background: var(--cartao);
+  border: 1px solid var(--texto);
+  border-radius: 999px;
+  padding: .25rem 1rem;
+}
+
+.curso {
+  border-top: 1px solid var(--texto);
+  border-bottom: 1px solid var(--texto);
+}
+.curso p { max-width: 65ch; }
+
+.botao {
+  display: inline-block;
+  background: var(--texto);
+  color: var(--fundo);
+  padding: .6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.botao:hover,
+.botao:focus-visible { background: var(--destaque); color: var(--texto); }
+
+.colunas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.coluna {
+  flex: 1 1 260px;
+  background: var(--cartao);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.coluna ul { margin: 0; padding-left: 1.1rem; }
+.coluna li { margin-bottom: .4rem; }
+
+.rodape {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  color: var(--apagado);
+  font-size: .9rem;
+}
+
+@media (max-width: 650px) {
+  .apresentacao {
+    flex-direction: column;
+    align-items: flex-start;
   }
+  h1 { font-size: 1.8rem; }
 }
-/* ===================== fim do LAYOUT ===================== */
-
-/* ---- Aparência (mude à vontade) ---- */
-.cabecalho {
-  background: var(--superficie);
-  color: var(--texto);
-  padding: 32px;
-  border: 1px solid var(--borda);
-  border-top: 4px solid var(--cor);
-  border-radius: var(--raio);
-}
-.cabecalho h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.6rem); color: var(--cor-escura); }
-.cabecalho p { margin: 6px 0 0; color: var(--suave); font-style: italic; }
-.cabecalho nav { margin-top: 16px; display: flex; gap: 20px; flex-wrap: wrap; }
-.cabecalho nav a { color: var(--cor); text-decoration: none; font-weight: bold; border-bottom: 2px solid transparent; }
-.cabecalho nav a:hover { border-bottom-color: var(--cor); }
-
-.cartao {
-  background: var(--superficie);
-  border: 1px solid var(--borda);
-  border-radius: var(--raio);
-  padding: 22px;
-}
-.cartao + .cartao { margin-top: 24px; }
-h2 { color: var(--cor-escura); margin-top: 0; border-bottom: 1px solid var(--borda); padding-bottom: 6px; }
-
-.projeto {
-  background: var(--fundo);
-  border: 1px solid var(--borda);
-  border-radius: var(--raio);
-  padding: 16px;
-}
-.projeto h3 { margin: 0 0 6px; color: var(--cor); }
-
-.habilidades { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.habilidades li { background: transparent; border: 1px solid var(--cor); color: var(--cor-escura); border-radius: var(--raio); padding: 4px 12px; font-size: .9rem; }
-.contato { list-style: none; padding: 0; margin: 0; }
-.contato li { margin: 10px 0; }
-.contato a { color: var(--cor); }
-.rodape { text-align: center; color: var(--suave); padding: 8px; font-size: .9rem; font-style: italic; }
