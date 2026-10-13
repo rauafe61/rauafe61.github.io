@@ -74,5 +74,11 @@ dt {
     video, iframe{
     max-width: 100%;
     height: auto;
+    justify-content: center;
     }
+
+    audio {
+    justify-content: center;
+    }
+    
 }
