@@ -1,327 +1,338 @@
-/* =========================
-   IMPORTAÇÃO DA FONTE
-   ========================= */
-
-/* Carrega a fonte Poppins da pasta fonts */
 @font-face {
     font-family: "Poppins";
     src: url("fonts/Poppins-Regular.ttf");
 }
 
-html {
-   zoom: 125%;
+:root {
+    --vermelho: #d32f2f;
+    --preto: #252525;
 }
-
-/* =========================
-   CONFIGURAÇÕES GERAIS
-   ========================= */
 
 body {
-    color: #252525; /* Cor padrão dos textos */
-    font-family: "Poppins"; /* Fonte aplicada em toda a página */
-    background-color: white; /* Fundo branco */
-    margin: 0; /* Remove margens padrão do navegador */
+    font-family: "Poppins";
+    margin: 0;
+    color: var(--preto);
+    background-image: url(images/vector.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-/* =========================
-   CABEÇALHO
-   ========================= */
-
-header {
-    background-color: #d32f2f; /* Cor vermelha do cabeçalho */
-    height: 80px; /* Altura fixa */
-    width: 100%; /* Ocupa toda a largura da tela */
-    display: flex; /* Alinha elementos horizontalmente */
-    align-items: center; /* Centraliza elementos verticalmente */
+.menu {
+    display: flex;
+    background-color: var(--vermelho);
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 10px 24px 10px 24px;
 }
 
-header h1 {
-    font-size: 26px; /* Tamanho do título */
-    color: white; /* Cor branca */
-    margin-left: -10px; /* Ajuste fino da posição */
-}
-
-header img {
-    height: 60px; /* Altura da imagem Torii */
-    margin-right: 0;
-}
-
-/* Classes auxiliares para cores */
-.black {
-    color: #252525;
-}
-
-.red {
-    color: #d32f2f;
-}
-
-/* Menu de navegação */
-.menu-option {
-    margin-left: auto; /* Empurra o menu para a direita */
-    color: white;
-    display: flex; /* Itens lado a lado */
-    gap: 40px; /* Espaçamento entre itens */
-    padding: 0 30px;
-}
-
-/* =========================
-   CONTEÚDO PRINCIPAL
-   ========================= */
-
-.container-principal {
-    display: flex; /* Organiza conteúdo em colunas */
-    align-items: flex-start; /* Alinha tudo pelo topo */
-    justify-content: space-between; /* Espaço entre texto e formulário */
-
-    min-height: calc(100vh - 80px); /* Ocupa a tela inteira descontando o header */
-
-    /* Imagem de fundo temática do Japão */
-
-    background-image: url("images/vector.png");
-    background-repeat: no-repeat; 
-    
-    /* 'cover' faz a imagem cobrir o espaço mantendo a proporção correta */
-    background-size: cover; 
-    
-    /* Centraliza ou ajusta a posição para focar na parte bonita da imagem */
-    background-position: center bottom; 
-
-    padding: 60px 40px 40px 40px; 
-    box-sizing: border-box;
-}
-
-/* =========================
-   COLUNA DE TEXTO
-   ========================= */
-
-.coluna-conteudo {
-    flex: 1; /* Ocupa espaço disponível */
-    max-width: 550px; /* Limita largura máxima */
-    padding: 20px;
-
-    box-sizing: border-box;
-
-    z-index: 2; /* Mantém o texto acima da imagem */
-    position: relative;
-
-    left: -250px; /* Move o bloco para a esquerda */
-    margin-top: -80px; /* Move o bloco para cima */
-}
-
-/* =========================
-   INTRODUÇÃO
-   ========================= */
-
-.introducao h1 {
-    font-size: 50px; /* Título principal */
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-
-.texto-descricao {
-    color: rgb(59, 59, 59);
-    max-width: 500px; /* Evita linhas muito grandes */
-    line-height: 1.6; /* Melhora leitura */
-}
-
-/* =========================
-   ELEMENTOS DECORATIVOS
-   ========================= */
-
-#forms {
+.logo {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    gap: 10px;
 }
 
-/* Bolinha vermelha decorativa */
-#circle {
+.logo img {
+    margin-top: 10px;
+}
+
+.menu ul {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu ul a {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.menu ul a:hover, .menu .mobile-menu:hover {
+    opacity: 0.6;
+    text-decoration: underline 1.5px;
+}
+
+.menu span {
+    color: var(--preto);
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+}
+
+.circle {
     width: 10px;
     height: 10px;
-    background-color: #d32f2f;
+    background-color: var(--vermelho);
     border-radius: 50%;
 }
 
-/* Linha decorativa */
-#line {
-    width: 150px;
+.line {
+    width: 25vw;
     height: 2px;
-    background-color: #d32f2f;
-    margin-left: 10px;
+    background-color: var(--vermelho);
 }
 
-/* =========================
-   FORMULÁRIO
-   ========================= */
+#sobre a, span{
+    color: var(--vermelho);
+    font-weight: bold;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
 
-.formulario {
-    width: 100%;
-    max-width: 450px; /* Limita largura */
+#sobre a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+    text-decoration: underline 1px;
+}
 
+#sobre p {
+    max-width: 40vw;
+}
+
+#conteudo {
+    background-color: #f0f0f0;
     padding: 30px;
-
-    background: #f0f0f0; /* Fundo cinza claro */
-    border-radius: 10px; /* Cantos arredondados */
-
-    box-sizing: border-box;
-
-    position: relative;
-    left: 25px; /* Move formulário para direita */
-    margin-top: -10px; /* Ajuste vertical */
+    border-radius: 10px;
+    width: 30vw;
 }
 
-.formulario-cadastro {
-    max-width: 450px;
-    margin-top: 30px;
-    /* Ativa as duas colunas lado a lado */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0 15px; /* 0 de espaço vertical extra (já controlado pelo margin-bottom do campo), 15px horizontal */
-}
-/* Faz o título do formulário ocupar a linha inteira */
-.titulo-formulario {
-    grid-column: span 2;
-    position: relative;
-    top: -32px; /* Ajusta a posição do título para cima */
-}
-/* Faz a seção "Nível de japonês" ocupar a linha inteira */
 .niveis {
     grid-column: span 2;
     display: flex;
     flex-direction: column;
-    margin-top: -39px; /* Mantive o seu ajuste original */
 }
+
 .botoes-acao {
     grid-column: span 2;
     display: flex;
     gap: 15px;
 }
 
-/* =========================
-   CAMPOS DO FORMULÁRIO
-   ========================= */
-
-.campo {
+.conteudo-principal {
     display: flex;
-    flex-direction: column; /* Label acima do input */
-    margin-bottom: 18px;
+    justify-content: space-between;
+    margin: 24px;
 }
 
-.campo label {
+.input-text input{
+    width: -webkit-fill-available;
+} 
+
+form label {
     font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 6px;
-    color: #252525;
 }
 
-.campo input {
-    padding: 10px; /* Espaço interno */
+form input {
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-
     font-family: "Poppins", sans-serif;
     font-size: 14px;
-
     outline: none;
-    transition: border-color 0.3s; /* Animação suave */
+    transition: border-color 0.3s
 }
 
-/* Destaca campo quando selecionado */
-.campo input:focus {
-    border-color: #d32f2f;
+form input:focus {
+    border-color: var(--vermelho);
 }
-
-input {
-    width: 100%; /* Ocupa toda a largura */
-    box-sizing: border-box;
-}
-
-/* =========================
-   NÍVEL DE JAPONÊS
-   ========================= */
-
-.niveis {
-    display: flex;
-    flex-direction: column;
-    margin-top: -39px;
-}
-
-h3 {
-    margin-top: 40px;
-    margin-bottom: 15px;
-    color: red;
-}
-
-.opcoes-radio {
-    display: flex;
-    gap: 15px; /* Espaço entre opções */
-    align-items: center;
-    margin-bottom: 25px;
-}
-
-.opcoes-radio input {
-    cursor: pointer; /* Muda cursor ao passar */
-}
-
-.opcoes-radio label {
-    margin-left: -5px;
-    cursor: pointer;
-}
-
-/* =========================
-   BOTÕES
-   ========================= */
 
 .botoes-acao {
     display: flex;
     gap: 15px;
 }
 
-/* Botão cadastrar */
 .btn-cadastrar {
-    background-color: #d32f2f;
+    background-color: var(--vermelho);
     color: white;
-
     border: none;
-
     padding: 12px 25px;
-
     font-family: "Poppins";
     font-weight: bold;
     font-size: 15px;
-
     border-radius: 5px;
-
     cursor: pointer;
-
     transition: background 0.2s;
 }
 
-/* Efeito ao passar o mouse */
 .btn-cadastrar:hover {
     background-color: #a62424;
 }
 
-/* Botão limpar */
 .btn-limpar {
     background-color: #f0f0f0;
     color: #252525;
-
     border: 1px solid #ccc;
-
     padding: 12px 25px;
-
     font-family: "Poppins";
     font-size: 15px;
-
     border-radius: 5px;
-
     cursor: pointer;
-
     transition: background 0.2s;
 }
 
-/* Efeito hover do botão limpar */
 .btn-limpar:hover {
     background-color: #e0e0e0;
+}
+
+.btn-cadastrar, .btn-limpar {
+    margin-top: 20px;
+}
+
+.opcoes-radio {
+    margin-top: -10px;
+}
+
+@media (max-width: 700px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #sobre {
+        margin-top: 50px;
+    }
+
+    .menu ul a {
+        font-size: 1rem;
+    }
+
+    .menu ul {
+        position: absolute;
+        margin-left: 0;
+        top: 6vh;
+        right: 0 ;
+        width: 50vw;
+        height: 92vh;
+        background-color: var(--vermelho);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 40px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .menu ul li {
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .menu ul.active {
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    p {
+    max-width: 100vw;
+    }
+
+    #sobre p {
+    max-width: 100%;
+    }
+
+    .conteudo-principal {
+        gap: 24px;
+        display: flex;
+        flex-direction: column;
+        margin: 24px;
+    }
+
+    #conteudo {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    
+    .input-text div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        width: 100%;
+        gap: 15px 0;
+    }
+
+    .niveis,
+    .botoes-acao {
+        grid-column: span 1;
+    }
+
+    .opcoes-radio {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .opcoes-radio div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 6px;
+    }
+
+
+    .botoes-acao {
+        flex-direction: column;
+    }
+
+    .btn-cadastrar,
+    .btn-limpar {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .btn-cadastrar {
+        margin-top: 10px;
+    }
 }

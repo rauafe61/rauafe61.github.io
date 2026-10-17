@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jornada Japão</title>
+</head>
+<body>
+    <div class="menu">
+
+        <div class="logo">
+            <a href="#"><img src="images/torii.png" alt="torii" width="80px"><a href="#"><span>JORNADA</span> JAPÃO</a>
+        </div>
+
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+        <ul>
+            <li><a href="#">Ínicio</a></li>
+            <li><a href="#sobre">Sobre o curso</a></li>
+            <li><a href="#conteudo">Conteúdo</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+
+    </div>
+
+    <div class="conteudo-principal">
+        <div id="sobre">
+            <h1>JORNADA <span>JAPÃO</span></h1>
+
+            <div class="forms">
+                <div class="circle"></div>
+                <div class="line"></div>
+            </div>
+
+            <h2>Bem vindo(a) ao cadastro do curso</h2>
+
+            <p>Domine o japonês prático e conquiste sua autonomia no outro lado do mundo. Do zero à conversação real, unindo idioma, cultura e a confiança que você precisa para viajar, trabalhar ou consumir sua cultura pop favorita. Domine o japonês prático e conquiste sua autonomia no outro lado do mundo. Do zero à conversação real, unindo idioma, cultura e a confiança que você precisa para viajar, trabalhar ou consumir sua cultura pop favorita.</p>
+
+            <a href="#conteudo">Sua viagem rumo à fluência começa aqui!</a>
+        </div>
+
+        <div id="conteudo">
+
+            <h2>Formulário de Cadastro:</h2>
+
+            <form>
+
+                <div class="input-text">
+                    <div>
+                        <label for="name">Nome Completo</label>
+                        <input type="text" name="name" placeholder="Digite seu nome completo">
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" placeholder="Digite seu e-mail">
+                    </div>
+
+                    <div>
+                        <label for="password">Senha</label>
+                        <input type="password" name="password" placeholder="Crie uma senha">
+                    </div>
+
+                    <div>
+                        <label for="confirm-password">Confirmar Senha</label>
+                        <input type="password" name="confirm-password" placeholder="Confirme sua senha">
+                    </div>
+
+                    <div>
+                        <label for="date">Data de Nascimento</label>
+                        <input type="date" name="date">
+                    </div>
+
+                    <div>
+                        <label for="tel">Telefone</label>
+                        <input type="tel" name="tel" placeholder="(11) 99999-9999">
+                    </div>
+
+                </div>
+
+                <div class="niveis">
+                    <h3>Nível de japonês:</h3>
+
+                    <div class="opcoes-radio">
+
+                        <div>
+                            <input type="radio" id="n1" name="botao" value="Iniciante">
+                            <label for="n1">
+                                <span>Iniciante</span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="n2" name="botao" value="Intermediario">
+                            <label for="n2">
+                                <span>Intermediário</span>
+                            </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" id="n3" name="botao" value="Avancado">
+                            <label for="n3">
+                                <span>Avançado</span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="botoes-acao">
+                    <button type="submit"
+                        onclick="alert('Dados enviados!')"
+                        class="btn-cadastrar">
+                        Cadastrar
+                    </button>
+
+                    <button type="reset" class="btn-limpar">
+                        Limpar
+                    </button>
+                    
+                </div>
+                <p><a href="../index.html">← Voltar para a página principal</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="mobile-navbar.js"></script>
+</body>
+</html>
